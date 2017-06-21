@@ -1,0 +1,19 @@
+#vscode
+.vscode
+
+# Logs
+logs
+*.log
+
+# Mac files
+.DS_Store
+
+# dist folder
+dist
+
+# Dependency directory
+node_modules
+
+# Yarn
+yarn.lock
+yarn-error.log
