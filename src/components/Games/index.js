@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Game from '../../components/Game';
+import './games.css';
 
 const Games = ({ games }) => {
 	const gamesElements = games.map(game => <Game
@@ -9,8 +10,10 @@ const Games = ({ games }) => {
 		gameLaunchUrlTemplate={game.gameLaunchUrlTemplate}
 		gameIconsUrlTemplate={game.gameIconsUrlTemplate}/>);
 	return (
-		<ul>
-			{gamesElements}
+		<ul className="games-list">
+			{(gamesElements.length > 0
+				? gamesElements
+				: <p>No games for this category available...</p>)}
 		</ul>
 	);
 };

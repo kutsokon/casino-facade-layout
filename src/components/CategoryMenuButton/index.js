@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './category-menu.css';
 
 const CategoryMenuButton = ({ toggleCategoryMenu }) => (
-	<div onClick={toggleCategoryMenu}>CategoryMenuButton</div>
+	<div className="menu-button" onClick={toggleCategoryMenu}></div>
 );
 
 CategoryMenuButton.propTypes = {

@@ -1,3 +1,15 @@
-.active {
-	color: red;
+a.category-item {
+	padding: 1rem 0;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	border-bottom: 1px solid #24292e;
+}
+
+a.category-item:first-child {
+	border-top: 1px solid #24292e;
+}
+
+a.category-item.active {
+	background: #d6d6d6;
+	color: #3e3e3e;
 }

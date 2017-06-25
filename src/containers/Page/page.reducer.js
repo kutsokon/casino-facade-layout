@@ -51,7 +51,7 @@ const pageFetching = (state = true, action) => {
 const config = (state = {
 	brandName: '',
 	lobbyCategories: [],
-	isCategorySectionOpened: false,
+	isCategoryMenuOpened: false,
 	gameLaunchUrlTemplate: '',
 	gameIconsUrlTemplate: '',
 	logoUrlTemplate: ''
@@ -74,7 +74,7 @@ const config = (state = {
 		case TOGGLE_CATEGORY_MENU:
 			return {
 				...state,
-				isCategorySectionOpened: !state.isCategorySectionOpened
+				isCategoryMenuOpened: !state.isCategoryMenuOpened
 			};
 		default:
 			return state;

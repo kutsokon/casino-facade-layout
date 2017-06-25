@@ -1,0 +1,7 @@
+.menu-button {
+	width: 2.5rem;
+	height: 4rem;
+    background: url('../../assets/menu-button.svg') no-repeat center center;
+    background-position: left center;
+}
+

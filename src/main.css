@@ -1,0 +1,19 @@
+html, body {
+	height: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #24292e;
+}
+
+@media (min-width:1025px) {
+	body {
+		background: red;
+	}
+}
+
+ul {
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}

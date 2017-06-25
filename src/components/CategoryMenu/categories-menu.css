@@ -1,0 +1,39 @@
+.categories-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform .3s linear;
+	box-sizing: border-box;
+	background: #ffffff;
+	z-index: 20;
+}
+
+.categories-menu.closed {
+	transform: translateX(-100%);
+}
+
+.categories-menu.opened {
+	transform: translateX(0%);
+}
+
+.categories-menu h2 {
+	margin: 0;
+	padding: 1rem 1rem;
+	text-transform: uppercase;
+	color: #8e8e8e;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.categories-menu nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.categories-menu nav a {
+	padding: 1rem;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}

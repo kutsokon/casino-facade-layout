@@ -104,7 +104,7 @@ const toggleCategory = id => (dispatch) => {
 	dispatch(activateCategory(id));
 	dispatch(fetchGamesForCategory(id));
 	if (deviceType === MOBILE) {
-		dispatch(toggleCategoryMenu);
+		dispatch(toggleCategoryMenu());
 	}
 };
 

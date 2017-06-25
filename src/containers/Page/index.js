@@ -7,6 +7,7 @@ import CategoryMenu from '../../components/CategoryMenu';
 import Games from '../../components/Games';
 import Spinner from '../../components/Spinner';
 import * as pageActions from './page.actions';
+import './page.css';
 
 class Page extends Component {
 	render() {
@@ -17,10 +18,11 @@ class Page extends Component {
 				<Header
 					playerInfo={playerInfo}
 					logoUrlTemplate={config.logoUrlTemplate}
-					toggleCategoryMenu={toggleCategoryMenu} />
+					toggleCategoryMenu={toggleCategoryMenu}/>
 				<CategoryMenu
 					lobbyCategories={config.lobbyCategories}
-					toggleCategory={toggleCategory}/>
+					toggleCategory={toggleCategory}
+					isCategoryMenuOpened={config.isCategoryMenuOpened}/>
 				{(gamesInfo.gamesFetching
 					? <Spinner />
 					: <Games games={gamesInfo.games}/>)}

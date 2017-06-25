@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Category from '../../components/Category';
+import './categories-menu.css';
 
-const CategoryMenu = ({ lobbyCategories, toggleCategory }) => {
+const CategoryMenu = ({ lobbyCategories, toggleCategory, isCategoryMenuOpened }) => {
 	let lobbyCategoriesElements = null;
 
 	lobbyCategoriesElements = lobbyCategories.map(category => <Category
@@ -14,7 +15,8 @@ const CategoryMenu = ({ lobbyCategories, toggleCategory }) => {
 		/>);
 
 	return (
-		<div>
+		<div className={`categories-menu ${isCategoryMenuOpened ? 'opened' : 'closed'}`}>
+			<h2>Game categories</h2>
 			<nav>
 				{lobbyCategoriesElements}
 			</nav>
@@ -24,7 +26,8 @@ const CategoryMenu = ({ lobbyCategories, toggleCategory }) => {
 
 CategoryMenu.propTypes = {
 	lobbyCategories: PropTypes.array.isRequired,
-	toggleCategory: PropTypes.func.isRequired
+	toggleCategory: PropTypes.func.isRequired,
+	isCategoryMenuOpened: PropTypes.bool.isRequired
 };
 
 export default CategoryMenu;

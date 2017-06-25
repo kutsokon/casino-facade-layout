@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import CategoryMenuButton from '../../components/CategoryMenuButton';
 import Logo from '../../components/Logo';
 import PlayerInfo from '../../components/PlayerInfo';
+import './header.css';
 
 const Header = ({ playerInfo, logoUrlTemplate, toggleCategoryMenu }) => (
-		<div>
-			<CategoryMenuButton toggleCategoryMenu={toggleCategoryMenu}/>
-			<Logo logoUrl={logoUrlTemplate}/>
+		<div className="header">
+			<div className="upper-header">
+				<CategoryMenuButton toggleCategoryMenu={toggleCategoryMenu}/>
+				<Logo logoUrl={logoUrlTemplate}/>
+			</div>
 			<PlayerInfo displayName={playerInfo.displayName} balance={playerInfo.balance} />
 		</div>
 	);
