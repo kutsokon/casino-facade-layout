@@ -4,19 +4,17 @@ import Category from '../../components/Category';
 import './categories-menu.css';
 
 const CategoryMenu = ({ lobbyCategories, toggleCategory, isCategoryMenuOpened }) => {
-	let lobbyCategoriesElements = null;
-
-	lobbyCategoriesElements = lobbyCategories.map(category => <Category
-		key={category.id}
-		id={category.id}
-		active={category.active}
-		displayName={category.displayName}
-		toggleCategory={toggleCategory}
-		/>);
-
+	const lobbyCategoriesElements = lobbyCategories.map(category =>
+		<Category
+			key={category.id}
+			id={category.id}
+			active={category.active}
+			displayName={category.displayName}
+			toggleCategory={toggleCategory}
+			/>);
 	return (
 		<div className={`categories-menu ${isCategoryMenuOpened ? 'opened' : 'closed'}`}>
-			<h2>Game categories</h2>
+			<h2>Game categories:</h2>
 			<nav>
 				{lobbyCategoriesElements}
 			</nav>

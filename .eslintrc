@@ -24,7 +24,8 @@
 		"no-extra-parens": 0,
 		"react/jsx-uses-vars": 1,
 		"no-param-reassign": [2, {"props": false}],
-		"import/prefer-default-export": 1,
-		"max-len": [1, {"code": 140}]
+		"import/prefer-default-export": 0,
+		"max-len": [1, {"code": 140}],
+		"no-console": [1, { "allow": ["warn", "error"] }],
 	}
 }

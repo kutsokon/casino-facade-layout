@@ -6,14 +6,14 @@ import PlayerInfo from '../../components/PlayerInfo';
 import './header.css';
 
 const Header = ({ playerInfo, logoUrlTemplate, toggleCategoryMenu }) => (
-		<div className="header">
-			<div className="upper-header">
-				<CategoryMenuButton toggleCategoryMenu={toggleCategoryMenu}/>
-				<Logo logoUrl={logoUrlTemplate}/>
-			</div>
-			<PlayerInfo displayName={playerInfo.displayName} balance={playerInfo.balance} />
+	<div className="header-wrapper">
+		<div className="header-logo">
+			<CategoryMenuButton toggleCategoryMenu={toggleCategoryMenu}/>
+			<Logo logoUrl={logoUrlTemplate}/>
 		</div>
-	);
+		<PlayerInfo displayName={playerInfo.displayName} balance={playerInfo.balance} />
+	</div>
+);
 
 Header.propTypes = {
 	playerInfo: PropTypes.object.isRequired,

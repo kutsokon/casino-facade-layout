@@ -6,13 +6,15 @@ import Header from '../../components/Header';
 import CategoryMenu from '../../components/CategoryMenu';
 import Games from '../../components/Games';
 import Spinner from '../../components/Spinner';
-import * as pageActions from './page.actions';
-import './page.css';
+import * as configActions from '../../actions/config.actions';
+import * as gamesInfoActions from '../../actions/gamesInfo.actions';
+import * as pageFetchingActions from '../../actions/pageFetching.actions';
+import * as playerInfoActions from '../../actions/playerInfo.actions';
 
 class Page extends Component {
 	render() {
 		const { playerInfo, config, gamesInfo } = this.props;
-		const { toggleCategory, toggleCategoryMenu } = this.props.pageActions;
+		const { toggleCategory, toggleCategoryMenu } = this.props.configActions;
 		return (
 			<div>
 				<Header
@@ -32,7 +34,10 @@ class Page extends Component {
 }
 
 Page.propTypes = {
-	pageActions: PropTypes.object.isRequired,
+	configActions: PropTypes.object.isRequired,
+	gamesInfoActions: PropTypes.object.isRequired,
+	pageFetchingActions: PropTypes.object.isRequired,
+	playerInfoActions: PropTypes.object.isRequired,
 	playerInfo: PropTypes.object.isRequired,
 	config: PropTypes.object.isRequired,
 	gamesInfo: PropTypes.object.isRequired
@@ -45,7 +50,10 @@ const mapStateToProps = state => ({
 	});
 
 const mapDispatchToProps = dispatch => ({
-		pageActions: bindActionCreators(pageActions, dispatch)
+		configActions: bindActionCreators(configActions, dispatch),
+		gamesInfoActions: bindActionCreators(gamesInfoActions, dispatch),
+		pageFetchingActions: bindActionCreators(pageFetchingActions, dispatch),
+		playerInfoActions: bindActionCreators(playerInfoActions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Page);

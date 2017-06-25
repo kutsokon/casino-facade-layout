@@ -7,12 +7,12 @@ import Spinner from './components/Spinner';
 import './main.css';
 
 const App = ({ pageFetching }) => (
-		<div className="wrapper">
-			{pageFetching
-				? <Spinner />
-				: <Page />}
-		</div>
-	);
+	<div>
+		{pageFetching
+			? <Spinner />
+			: <Page />}
+	</div>
+);
 
 App.propTypes = {
 	pageFetching: PropTypes.bool.isRequired

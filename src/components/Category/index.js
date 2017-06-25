@@ -7,9 +7,11 @@ const Category = ({ displayName, id, active, toggleCategory }) => {
 		e.preventDefault();
 		toggleCategory(id);
 	};
-	return <a onClick={toggleCategoryWithId} className={`category-item ${active ? 'active' : ''}`}>
-				{displayName}
-			</a>;
+	return (
+		<a onClick={toggleCategoryWithId} className={`category-item ${active ? 'active' : ''}`}>
+			{displayName}
+		</a>
+	);
 };
 
 Category.propTypes = {

@@ -34,7 +34,7 @@ module.exports = {
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				use: [
 					'file-loader?name=assets/[name].[ext]',
-					'image-webpack-loader'
+					'image-webpack-loader?{pngquant:{quality: "65-90", speed: 4}}'
 				]
 			}
 		]

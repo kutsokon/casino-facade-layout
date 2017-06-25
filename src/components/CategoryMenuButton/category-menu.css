@@ -1,7 +1,12 @@
 .menu-button {
 	width: 2.5rem;
 	height: 4rem;
-    background: url('../../assets/menu-button.svg') no-repeat center center;
-    background-position: left center;
+	background: url('../../assets/menu-button.svg') no-repeat center center;
+	background-position: left center;
 }
 
+@media (min-width: 1025px) {
+	.menu-button {
+		display: none;
+	}
+}

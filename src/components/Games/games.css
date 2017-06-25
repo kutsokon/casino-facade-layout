@@ -1,49 +1,56 @@
 ul.games-list {
 	display: flex;
-	flex-wrap: wrap;
-	padding: 0 1rem;
+	box-sizing: border-box;
 	margin: 1rem 0;
+	padding: 0 1rem;
+	text-align: left;
+	flex-wrap: wrap;
+}
+
+ul.games-list > p {
+	text-align: center;
+	width: 100%;
+	margin: 3rem 0;
 }
 
 ul.games-list li {
+	box-sizing: border-box;
 	width: 49%;
 	margin-top: 2%;
-	border: 1px solid #24292e;
-	box-sizing: border-box;
+	background: #d6d6d6;
 }
 
 ul.games-list li a {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 1.5rem;
 }
 
 ul.games-list li a p {
 	position: absolute;
-	text-align: center;
-	color: #ffffff;
-	text-shadow: 0px 0px 2px #24292e;
+	bottom: 0;
+	left: 50%;
 	width: 100%;
 	margin: 0;
-}
-
-ul.games-list li a img {
-	width: 100%;
-	height: 100%;
+	padding-bottom: .2rem;
+	transform: translateX(-50%);
+	text-align: center;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 2px #24292e;
 }
 
 ul.games-list li:nth-child(odd) {
 	margin-right: 2%;
 }
 
-
 ul.games-list li:before {
-	content: "";
 	float: left;
 	padding-top: 100%;
+	content: '';
 }
 
 @media (min-width: 801px) {
@@ -53,5 +60,18 @@ ul.games-list li:before {
 
 	ul.games-list li:not(:nth-child(4n)) {
 		margin-right: 2%;
+	}
+}
+
+@media (min-width: 1025px) {
+	ul.games-list {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	ul.games-list li {
+		display: inline-block;
 	}
 }
