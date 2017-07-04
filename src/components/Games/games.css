@@ -3,7 +3,6 @@ ul.games-list {
 	box-sizing: border-box;
 	margin: 1rem 0;
 	padding: 0 1rem;
-	text-align: left;
 	flex-wrap: wrap;
 }
 
@@ -37,7 +36,6 @@ ul.games-list li a p {
 	margin: 0;
 	padding-bottom: .2rem;
 	transform: translateX(-50%);
-	text-align: center;
 	text-align: center;
 	color: #fff;
 	text-shadow: 0 0 2px #24292e;

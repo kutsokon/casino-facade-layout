@@ -1,23 +1,23 @@
 {
-	extends: [
+	"extends": [
 		"airbnb/base",
 		"plugin:react/recommended"
 	],
-	env: {
+	"env": {
 		"browser": true,
 		"jest": true
 	},
-	parser: "babel-eslint",
-	plugins: [
+	"parser": "babel-eslint",
+	"plugins": [
 		"react",
 		"jsx-a11y",
 		"import",
 		"eslint-plugin-react"
 	],
-	ecmaFeatures: {
-		jsx: true
+	"ecmaFeatures": {
+		"jsx": true
 	},
-	rules: {
+	"rules": {
 		"indent": 0,
 		"no-tabs": 0,
 		"comma-dangle": 0,
@@ -26,6 +26,6 @@
 		"no-param-reassign": [2, {"props": false}],
 		"import/prefer-default-export": 0,
 		"max-len": [1, {"code": 140}],
-		"no-console": [1, { "allow": ["warn", "error"] }],
+		"no-console": [1, { "allow": ["warn", "error"] }]
 	}
 }

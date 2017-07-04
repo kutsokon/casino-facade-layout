@@ -10,10 +10,10 @@ const parseGameUrl = (url, id) => url.replace(gameIdPlaceholder, id);
 const filterGamesByDeviceType = (games, type) =>
 	games.filter(game => game.devices.some(availableType => type === availableType));
 
-const enrichGamesWithUrls = (games, gameLaunchUrlTemplate, gameIconsUrlTemplate) => games.map(category => ({
-				...category,
-				gameLaunchUrlTemplate: parseGameUrl(gameLaunchUrlTemplate, category.id),
-				gameIconsUrlTemplate: parseGameUrl(gameIconsUrlTemplate, category.id)
+const enrichGamesWithUrls = (games, gameLaunchUrlTemplate, gameIconsUrlTemplate) => games.map(game => ({
+				...game,
+				gameLaunchUrlTemplate: parseGameUrl(gameLaunchUrlTemplate, game.id),
+				gameIconsUrlTemplate: parseGameUrl(gameIconsUrlTemplate, game.id)
 			}));
 
 const gamesInfo = (state = {
